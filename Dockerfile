@@ -4,7 +4,7 @@ WORKDIR /src
 COPY src/*.csproj .
 RUN dotnet restore
 
-COPY src/* .
+COPY src/* ./
 RUN dotnet publish -c release -o /app --no-restore
 
 FROM mcr.microsoft.com/dotnet/runtime:6.0-alpine
