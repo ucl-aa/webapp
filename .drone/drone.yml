@@ -9,6 +9,7 @@ steps:
       - name: dockersock
         path: /var/run/
     commands:
+      - sleep 10
       - docker build -t cr.seen.wtf/aa-webapp .
       - docker push cr.seen.wtf/aa-webapp
 
