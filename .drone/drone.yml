@@ -5,13 +5,21 @@ name: default
 steps:
   - name: build-image
     image: docker:dind
-    privileged: true
     volumes:
       - name: dockersock
         path: /var/run/
     commands:
       - docker build -t cr.seen.wtf/aa-webapp .
       - docker push cr.seen.wtf/aa-webapp
+
+services:
+  - name: docker
+    image: docker:dind
+    privileged: true
+    volumes:
+      - name: dockersock
+        path: /var/run
+
 
 volumes:
   - name: dockersock
