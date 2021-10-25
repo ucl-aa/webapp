@@ -1,0 +1,18 @@
+﻿---
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+  - name: build-image
+      image: docker:dind
+      volumes:
+        - name: dockersock
+          path: /var/run/
+      commands:
+        - docker build -t cr.seen.wtf/webapp .
+        - docker push cr.seen.wtf/webapp
+
+volumes:
+  - name: dockersock
+    temp: {}
