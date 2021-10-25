@@ -1,5 +1,4 @@
-﻿---
-kind: pipeline
+﻿kind: pipeline
 type: kubernetes
 name: default
 
