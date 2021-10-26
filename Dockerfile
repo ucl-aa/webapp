@@ -1,16 +1,14 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 WORKDIR /src
 
-# COPY src/*.csproj .
-# RUN dotnet restore
+COPY WebApp/*.csproj WebApp/
+COPY WebAppTest/*.csproj WebAppTest/
 
-COPY src/ ./
+RUN dotnet restore WebApp
+RUN dotnet restore WebAppTest
+
+COPY . .
 RUN dotnet publish -c Release -o /app
-
-# FROM mcr.microsoft.com/dotnet/runtime:6.0-alpine
-# WORKDIR /app
-# COPY --from=build /app .
-# ENTRYPOINT ["/bin/sh"]
 
 FROM alpine:3.14.2 as base
 
