@@ -5,7 +5,6 @@ name: default
 steps:
   - name: semantic-release
     image: cr.seen.wtf/semantic-release
-    privileged: true
     environment:
       GH_TOKEN:
         from_secret: GITHUB_TOKEN
@@ -13,10 +12,20 @@ steps:
       - name: dockersock
         path: /var/run/
     commands:
-      - sleep 10
+      - apt update && apt upgrade && apt install docker.io -y
       - npm i -g @semantic-release-plus/docker
-      - docker build -t username/imagename .
+      - docker build -t webapp .
       - semantic-release
+    
+  - name: build-image
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/
+    commands:
+      - sleep 10
+      - docker build -t cr.seen.wtf/aa-webapp .
+      - docker push cr.seen.wtf/aa-webapp
 
 services:
   - name: docker
