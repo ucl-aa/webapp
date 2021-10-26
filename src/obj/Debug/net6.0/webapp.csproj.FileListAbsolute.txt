@@ -813,3 +813,4 @@ C:\AllMyStuff\Github\webapp\src\obj\Debug\net6.0\webapp.csproj.CopyComplete
 C:\AllMyStuff\Github\webapp\src\obj\Debug\net6.0\webapp.dll
 C:\AllMyStuff\Github\webapp\src\obj\Debug\net6.0\ref\webapp.dll
 C:\AllMyStuff\Github\webapp\src\obj\Debug\net6.0\webapp.pdb
+C:\AllMyStuff\Github\webapp\src\obj\Debug\net6.0\webapp.csproj.AssemblyReference.cache

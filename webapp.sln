@@ -6,12 +6,16 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapp", "src\webapp.csproj", "{C81640E9-781E-4BD6-8A1D-91BC382B0AC1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-files", "solution-files", "{555CAA02-7398-47B9-90EF-F5EA306AF0C0}"
-ProjectSection(SolutionItems) = preProject
-	Dockerfile = Dockerfile
-	.releaserc = .releaserc
-	package.json = package.json
-	.drone\drone.yml = .drone\drone.yml
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.releaserc = .releaserc
+		Dockerfile = Dockerfile
+		.drone\drone.yml = .drone\drone.yml
+		package.json = package.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapptest", "webapptest\webapptest.csproj", "{41C70968-2111-4FFA-8D91-7893CF90820F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webappEdgeDriverTest", "webappEdgeDriverTest\webappEdgeDriverTest.csproj", "{EBC733DB-2917-42C8-A297-F1FBA750AFAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{C81640E9-781E-4BD6-8A1D-91BC382B0AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C81640E9-781E-4BD6-8A1D-91BC382B0AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C81640E9-781E-4BD6-8A1D-91BC382B0AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C70968-2111-4FFA-8D91-7893CF90820F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C70968-2111-4FFA-8D91-7893CF90820F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C70968-2111-4FFA-8D91-7893CF90820F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C70968-2111-4FFA-8D91-7893CF90820F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC733DB-2917-42C8-A297-F1FBA750AFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC733DB-2917-42C8-A297-F1FBA750AFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC733DB-2917-42C8-A297-F1FBA750AFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC733DB-2917-42C8-A297-F1FBA750AFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

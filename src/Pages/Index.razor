@@ -11,7 +11,18 @@
 	</div>
 	<div>
 		<label>History</label>
-		<datalist itemref=></datalist>
+		<table border="1">
+		<tbody>
+		@foreach(var status in statuses)
+		{
+			<tr>
+				<td>
+					@status
+				</td>
+			</tr>
+		}
+		</tbody>
+		</table>
 	</div>
 </div>
 
