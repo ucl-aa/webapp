@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-files", "solution-
 ProjectSection(SolutionItems) = preProject
 	Dockerfile = Dockerfile
 	.releaserc = .releaserc
+	package.json = package.json
+	.drone\drone.yml = .drone\drone.yml
 EndProjectSection
 EndProject
 Global

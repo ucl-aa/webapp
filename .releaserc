@@ -16,35 +16,24 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "docker build -t cr.seen.wtf/webapp ."
+                "prepareCmd": "docker build -t webapp ."
             }
         ],
         [
-            "semantic-release-docker",
+            "@semantic-release-plus/docker",
             {
-                "name": "cr.seen.wtf/webapp"
+                "name": "webapp",
+                "registry": "cr.seen.wtf",
+                "skipLogin": true
             }
         ],
         [
             "@semantic-release/git",
             {
                 "assets": [
-                    "CHANGELOG.md",
-                    "package.json",
-                    "package-lock.json",
-                    "version"
+                    "CHANGELOG.md"
                 ]
             }
         ]
-    ],
-    "release": {
-        "verifyConditions": {
-            "path": "semantic-release-docker",
-            "registryUrl": "cr.seen.wtf"
-        },
-        "publish": {
-            "path": "semantic-release-docker",
-            "name": "cr.seen.wtf/webapp"
-        }
-    }
+    ]
 }

@@ -3,15 +3,20 @@ type: kubernetes
 name: default
 
 steps:
-  - name: build-image
-    image: docker:dind
-    volumes:
-      - name: dockersock
-        path: /var/run/
-    commands:
-      - sleep 10
-      - docker build -t cr.seen.wtf/aa-webapp .
-      - docker push cr.seen.wtf/aa-webapp
+  - name: semantic-release
+      image: cr.seen.wtf/semantic-release
+      privileged: true
+      environment:
+        GH_TOKEN:
+          from_secret: GITHUB_TOKEN
+      volumes:
+        - name: dockersock
+          path: /var/run/
+      commands:
+        - sleep 10
+        - npm i -g @semantic-release-plus/docker
+        - docker build -t username/imagename .
+        - semantic-release
 
 services:
   - name: docker
