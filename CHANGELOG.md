@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.1.4](https://github.com/ucl-aa/webapp/compare/v1.1.3...v1.1.4) (2021-10-26)
+
+
+### Bug Fixes
+
+* Add automatic test run ([d60afc9](https://github.com/ucl-aa/webapp/commit/d60afc9ecd23786b47cb7c586329fda06cfc926f))
+
 ## [1.1.3](https://github.com/ucl-aa/webapp/compare/v1.1.2...v1.1.3) (2021-10-26)
 
 
