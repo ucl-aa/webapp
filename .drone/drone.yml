@@ -5,6 +5,7 @@ name: default
 steps:
   - name: semantic-release
     image: cr.seen.wtf/semantic-release-container
+    pull: always
     environment:
       GH_TOKEN:
         from_secret: GITHUB_TOKEN
