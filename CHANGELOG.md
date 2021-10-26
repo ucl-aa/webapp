@@ -1,5 +1,26 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/ucl-aa/webapp/compare/v1.0.0...v1.1.0) (2021-10-26)
+
+
+### Bug Fixes
+
+* Always pull image ([9a3df23](https://github.com/ucl-aa/webapp/commit/9a3df23d4ce4078c447870a58c97b45483b061a1))
+* Build image ([f98bb4e](https://github.com/ucl-aa/webapp/commit/f98bb4edad3db32f051df8beb10b2ffe53be3688))
+* Docker build ([0f657c4](https://github.com/ucl-aa/webapp/commit/0f657c40a42453180ba6045df049efab7fc4eeab))
+* Docker build ([0c467a7](https://github.com/ucl-aa/webapp/commit/0c467a71ba6c179a459af5fa8ac25d97c5cfe283))
+* Docker build ([c5f6481](https://github.com/ucl-aa/webapp/commit/c5f6481ea91a53b14cef746e46a576bfbab1cbdd))
+* Dockerfile ([60a80ea](https://github.com/ucl-aa/webapp/commit/60a80ea99cb8da983d32ad08b48f6f578b8d8d5e))
+* New semantic-release image ([4ed45f1](https://github.com/ucl-aa/webapp/commit/4ed45f12682b633a19cc3e712262d22dc48d3d0d))
+* Pipeline ([20de2a6](https://github.com/ucl-aa/webapp/commit/20de2a61d735d6d6a1c6a99e29066b50f3466905))
+* RootNamespace ([3496975](https://github.com/ucl-aa/webapp/commit/349697593b19ebaf93797a69cbd04d64c66cf795))
+* semantic-release image ([7d8e9ff](https://github.com/ucl-aa/webapp/commit/7d8e9ff563a14ab9f35088ad6c6fd3d8091c0d11))
+
+
+### Features
+
+* Pipeline work ([468ab94](https://github.com/ucl-aa/webapp/commit/468ab947c7ef0dc99ac275b2ae6ec0c27dcddc52))
+
 # 1.0.0 (2021-10-26)
 
 
