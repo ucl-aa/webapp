@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.1.2](https://github.com/ucl-aa/webapp/compare/v1.1.1...v1.1.2) (2021-10-26)
+
+
+### Bug Fixes
+
+* package.json ([a341d07](https://github.com/ucl-aa/webapp/commit/a341d07e98550388c6cc54f9da1326c3bcf602c5))
+* package.json ([c1d90c8](https://github.com/ucl-aa/webapp/commit/c1d90c868996a5049da982d2f6fdb6dac5728cc9))
+
 ## [1.1.1](https://github.com/ucl-aa/webapp/compare/v1.1.0...v1.1.1) (2021-10-26)
 
 
