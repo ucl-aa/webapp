@@ -59,7 +59,7 @@ steps:
       - sed -i "s/KUBE_CLUSTER_CERT/$KUBE_CLUSTER_CERT/g" kube_config.yml
       - sed -i "s/KUBE_CLIENT_CERT/$KUBE_CLIENT_CERT/g" kube_config.yml
       - sed -i "s/KUBE_CLIENT_KEY/$KUBE_CLIENT_KEY/g" kube_config.yml
-      - mkdir /.kube && cp config /.kube/config
+      - sudo mkdir /.kube && cp config /.kube/config
       - kubectl rollout restart -n ucl-aa deploy aa-webapp
 
 trigger:
