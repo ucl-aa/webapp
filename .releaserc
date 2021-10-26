@@ -36,6 +36,14 @@
                     "package.json"
                 ]
             }
+        ],
+        [
+            "@semantic-release/github",
+            {
+                "assets": [
+                    "package.json"
+                ]
+            }
         ]
     ]
 }
