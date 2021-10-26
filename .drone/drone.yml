@@ -3,6 +3,20 @@ type: kubernetes
 name: default
 
 steps:
+  - name: semantic-release
+    image: cr.seen.wtf/semantic-release
+    environment:
+      GH_TOKEN:
+        from_secret: GITHUB_TOKEN
+    volumes:
+      - name: dockersock
+        path: /var/run/
+    commands:
+      - apt update && apt upgrade && apt install docker.io -y
+      - npm i -g @semantic-release-plus/docker
+      - docker build -t webapp .
+      - semantic-release
+    
   - name: build-image
     image: docker:dind
     volumes:

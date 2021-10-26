@@ -6,9 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapp", "src\webapp.csproj", "{C81640E9-781E-4BD6-8A1D-91BC382B0AC1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-files", "solution-files", "{555CAA02-7398-47B9-90EF-F5EA306AF0C0}"
-	ProjectSection(SolutionItems) = preProject
-		Dockerfile = Dockerfile
-	EndProjectSection
+ProjectSection(SolutionItems) = preProject
+	Dockerfile = Dockerfile
+	.releaserc = .releaserc
+	package.json = package.json
+	.drone\drone.yml = .drone\drone.yml
+EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

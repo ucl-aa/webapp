@@ -1,0 +1,10 @@
+{
+    "name": "webapp",
+    "version": "1.0.0",
+    "description": "example usage of docker plugin",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ucl-aa/webapp.git"
+    }
+}
