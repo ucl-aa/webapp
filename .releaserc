@@ -2,7 +2,7 @@
     "branches": [
         "main"
     ],
-    "repositoryUrl": "https://github.com/scailr/scailr-root-config.git",
+    "repositoryUrl": "https://github.com/ucl-aa/webapp.git",
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
@@ -36,5 +36,15 @@
                 ]
             }
         ]
-    ]
+    ],
+    "release": {
+        "verifyConditions": {
+            "path": "semantic-release-docker",
+            "registryUrl": "cr.seen.wtf"
+        },
+        "publish": {
+            "path": "semantic-release-docker",
+            "name": "cr.seen.wtf/webapp"
+        }
+    }
 }
