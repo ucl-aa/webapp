@@ -388,3 +388,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 node_modules/
+.drone/
+.releaserc
+*.md
+package*.json

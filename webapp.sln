@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-files", "solution-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{8D9708F0-11BB-48D1-859A-DA4248E904FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebappEdgeDriverTest", "WebAppEdgeDriverTest\WebappEdgeDriverTest.csproj", "{6B8BF2BF-EB3B-4B79-9F84-EF29B3B7AE68}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppTest", "WebAppTest\WebAppTest.csproj", "{740ED106-7EF1-4A64-B926-AA7B49DE0364}"
 EndProject
 Global
@@ -27,10 +25,6 @@ Global
 		{8D9708F0-11BB-48D1-859A-DA4248E904FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D9708F0-11BB-48D1-859A-DA4248E904FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D9708F0-11BB-48D1-859A-DA4248E904FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B8BF2BF-EB3B-4B79-9F84-EF29B3B7AE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B8BF2BF-EB3B-4B79-9F84-EF29B3B7AE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B8BF2BF-EB3B-4B79-9F84-EF29B3B7AE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B8BF2BF-EB3B-4B79-9F84-EF29B3B7AE68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{740ED106-7EF1-4A64-B926-AA7B49DE0364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{740ED106-7EF1-4A64-B926-AA7B49DE0364}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{740ED106-7EF1-4A64-B926-AA7B49DE0364}.Release|Any CPU.ActiveCfg = Release|Any CPU
