@@ -5,12 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DeleteExistingFiles>True</DeleteExistingFiles>
-    <ExcludeApp_Data>False</ExcludeApp_Data>
-    <LastUsedPlatform>Any CPU</LastUsedPlatform>
-    <PublishProvider>FileSystem</PublishProvider>
-    <PublishUrl>..\publish\webapp</PublishUrl>
-    <WebPublishMethod>FileSystem</WebPublishMethod>
-    <SiteUrlToLaunchAfterPublish />
+    <RootNamespace>WebApp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
