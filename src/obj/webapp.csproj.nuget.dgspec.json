@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marianne\\source\\repos\\webapp\\src\\webapp.csproj": {}
+    "C:\\AllMyStuff\\Github\\webapp\\src\\webapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marianne\\source\\repos\\webapp\\src\\webapp.csproj": {
+    "C:\\AllMyStuff\\Github\\webapp\\src\\webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marianne\\source\\repos\\webapp\\src\\webapp.csproj",
+        "projectUniqueName": "C:\\AllMyStuff\\Github\\webapp\\src\\webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "C:\\Users\\Marianne\\source\\repos\\webapp\\src\\webapp.csproj",
-        "packagesPath": "C:\\Users\\Marianne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marianne\\source\\repos\\webapp\\src\\obj\\",
+        "projectPath": "C:\\AllMyStuff\\Github\\webapp\\src\\webapp.csproj",
+        "packagesPath": "C:\\Users\\Core\\.nuget\\packages\\",
+        "outputPath": "C:\\AllMyStuff\\Github\\webapp\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marianne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Core\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,12 +60,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.0-rc.2.21480.5, 6.0.0-rc.2.21480.5]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

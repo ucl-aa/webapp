@@ -2,8 +2,25 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<div>
+	<img src=~/logoicon.png/>
+	<div class='background'>
+			<h1 class='title'>Tracking Number</h1>
+			<input placeholder='xxxx-xxxx-xxxx' class='traceinput'/>
+			<button>Enter</button>
+	</div>
+	<div>
+		<label>History</label>
+		<datalist itemref=></datalist>
+	</div>
+</div>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code 
+{
+	private IEnumerable<string> statuses = new[]
+	{
+		"Gay",
+		"Faggit",
+		"Dead"
+	};
+}
