@@ -3,6 +3,11 @@ type: kubernetes
 name: default
 
 steps:
+  - name: test
+    image: mcr.microsoft.com/dotnet/sdk:6.0-alpine
+    commands:
+      - dotnet test backend
+
   - name: semantic-release
     image: cr.seen.wtf/semantic-release-container
     pull: always
@@ -13,8 +18,10 @@ steps:
       - name: dockersock
         path: /var/run/
     commands:
-      - sleep 6
       - semantic-release
+    when:
+      status:
+        - success
 
 services:
   - name: docker
