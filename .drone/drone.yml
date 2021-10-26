@@ -51,10 +51,10 @@ steps:
       KUBE_CLIENT_KEY:
         from_secret: KUBE_CLIENT_KEY
     commands:
-      - sed -i "s/KUBE_CLUSTER_CERT/$KUBE_CLUSTER_CERT/g" kube_config.yml
-      - sed -i "s/KUBE_CLIENT_CERT/$KUBE_CLIENT_CERT/g" kube_config.yml
-      - sed -i "s/KUBE_CLIENT_KEY/$KUBE_CLIENT_KEY/g" kube_config.yml
-      - KUBE_CONFIG=$(pwd)/kube_config.yml && export KUBE_CONFIG
+      - sed -i "s/KUBE_CLUSTER_CERT/$KUBE_CLUSTER_CERT/g" .drone/kube_config.yml
+      - sed -i "s/KUBE_CLIENT_CERT/$KUBE_CLIENT_CERT/g" .drone/kube_config.yml
+      - sed -i "s/KUBE_CLIENT_KEY/$KUBE_CLIENT_KEY/g" .drone/kube_config.yml
+      - KUBE_CONFIG=$(pwd)/.drone/kube_config.yml && export KUBE_CONFIG
       - kubectl rollout restart -n ucl-aa deploy aa-webapp
 
 trigger:
