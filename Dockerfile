@@ -2,10 +2,7 @@
 WORKDIR /src
 
 COPY WebApp/*.csproj WebApp/
-COPY WebAppTest/*.csproj WebAppTest/
-
 RUN dotnet restore WebApp
-RUN dotnet restore WebAppTest
 
 COPY . .
 RUN dotnet publish -c Release -o /app WebApp
