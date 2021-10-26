@@ -8,7 +8,7 @@ RUN dotnet restore WebApp
 RUN dotnet restore WebAppTest
 
 COPY . .
-RUN dotnet publish -c Release -o /app
+RUN dotnet -c Release -o /app publish WebApp
 
 FROM alpine:3.14.2 as base
 
