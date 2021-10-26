@@ -17,8 +17,8 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
+[Dd]ebug/**
+[Dd]ebugPublic/**
 [Rr]elease/
 [Rr]eleases/
 x64/
@@ -388,3 +388,18 @@ FodyWeavers.xsd
 *.sln.iml
 
 node_modules
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.webapp.iml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
