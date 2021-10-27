@@ -8,8 +8,10 @@
     <RootNamespace>WebApp</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Shared\Index.razor.css" />
+  <ItemGroup><!--    <None Remove="Shared\Index.razor.css" />-->
+    <!--<None Remove="**/*.razor.css" />-->
+  
+    <Folder Include="wwwroot\scss" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,4 +19,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-rc.1.21452.15" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Pages\Index.razor.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+  
 </Project>

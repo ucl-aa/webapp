@@ -1,4 +1,7 @@
-﻿html, body {
+﻿@use 'components/mainlayout';
+@use 'components/navmenu';
+
+html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
