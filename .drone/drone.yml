@@ -1,6 +1,6 @@
 ﻿kind: pipeline
 type: kubernetes
-name: default
+name: build
 
 steps:
   - name: test
@@ -34,3 +34,24 @@ services:
 volumes:
   - name: dockersock
     temp: {}
+
+trigger:
+  event:
+    - push
+
+---
+kind: pipeline
+type: kubernetes
+name: deploy
+
+steps:
+  - name: deploy
+    image: bitnami/kubectl
+    commands:
+      - kubectl rollout restart -n ucl-aa deploy aa-webapp
+
+trigger:
+  target:
+    - production
+  event:
+    - promote
