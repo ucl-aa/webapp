@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/ucl-aa/webapp/compare/v1.1.4...v1.2.0) (2021-10-27)
+
+
+### Features
+
+* Deployment Pipeline ([8d5dca1](https://github.com/ucl-aa/webapp/commit/8d5dca1d8c9cf606de183329430d8ed639929657))
+
 ## [1.1.4](https://github.com/ucl-aa/webapp/compare/v1.1.3...v1.1.4) (2021-10-26)
 
 
