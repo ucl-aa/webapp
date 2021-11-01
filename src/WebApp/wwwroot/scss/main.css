@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 0;
+}
+
+a {
+  color: #009E58;
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+}
+
+.data-table {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.data-table th {
+  text-align: left;
+}
+.data-table td {
+  padding: 1rem 0;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #005542;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.navbar-item {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+.navbar-item .navbar-item-bg {
+  position: absolute;
+  background-color: #009E58;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  transition: 200ms ease transform;
+}
+.navbar-item img {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 1;
+}
+.navbar-item:hover .navbar-item-bg {
+  transform: matrix(1, 0, 0, 0.5, 0, 16);
+}
+.navbar-item:hover .image-shadow {
+  opacity: 0.4;
+}
+
+.image-shadow {
+  position: absolute;
+  background-color: #787878;
+  opacity: 0;
+  width: 3rem;
+  height: 10px;
+  left: 0.5rem;
+  bottom: 0.6rem;
+  border-radius: 50%;
+  transition: 200ms ease opacity;
+}
+
+.title {
+  display: block;
+  color: white;
+  font-size: 4rem;
+  align-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.search-container {
+  background-color: #009E58;
+  padding: 4rem 4rem;
+}
+
+.ma {
+  max-width: 80rem;
+  margin: auto;
+}
+
+.search-input {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-standard {
+  position: absolute;
+  height: 69px;
+  width: 69px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #005542;
+  border-radius: 10px;
+  border: 0;
+  box-sizing: border-box;
+  aspect-ratio: 1/1;
+  padding: 0.6rem;
+  transition: 200ms ease background-color, 200ms ease transform;
+}
+.btn-standard:hover {
+  background-color: #005a46;
+  transform: scale(1.2);
+}
+.btn-standard img {
+  width: 48px;
+  height: 48px;
+}
+
+.logo {
+  width: 6rem;
+  padding: 1rem;
+}
+
+.trace-input {
+  position: absolute;
+  top: 0;
+  width: calc(100% - (69px + 2rem));
+  font-size: 2rem;
+  border-radius: 10px;
+  border: 0;
+  padding: 1rem;
+  margin: 0 20rem 0 0;
+  transition: 200ms ease transform;
+}
+.trace-input:focus {
+  outline: none;
+  transform: scale(1.04);
+}
+
+.search-input-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 6rem 0;
+}
+
+.trace-input-text {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.content-container {
+  padding: 4rem;
+}
+.content-container h2 {
+  padding-bottom: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
