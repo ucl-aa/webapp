@@ -8,6 +8,7 @@ namespace WebApp.Services
     public class DeliveryServiceStub : IDeliveryService
     {
         private List<Delivery> _deliveries = new List<Delivery>();
+        private List<Status> _statuses = new List<Status>();
         private Status _deployedStatus;
         private Status _arrivedStatus;
         private Delivery _delivery;
@@ -25,11 +26,19 @@ namespace WebApp.Services
                 UpdateTime = DateTime.Now,
                 Message = "Package has arrived at destination"
             };
+            _statuses.Add(_deployedStatus);
+            _statuses.Add(_arrivedStatus);
+            _delivery = new Delivery()
+            {
+                TracingId = "asdasd2233",
+                StatusHistory = _statuses
+            };
+
         }
         
-        public Task<Delivery> GetDeliveryAsync(string tracingId)
+        public async Task<Delivery> GetDeliveryAsync(string tracingId)
         {
-            throw new System.NotImplementedException();
+            return _delivery;
         }
     }
 }

@@ -1,9 +1,10 @@
-﻿using WebApp.ViewModels;
+﻿using System.Threading.Tasks;
+using WebApp.ViewModels;
 
 namespace WebApp.Repositories
 {
     public interface IStatusHistoryRepository
     {
-        Delivery GetStatusHistoryFromTracingId(string tracingId);
+        Task<Delivery> GetStatusHistoryFromTracingId(string tracingId);
     }
 }

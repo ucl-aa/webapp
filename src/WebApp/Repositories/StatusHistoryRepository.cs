@@ -1,4 +1,4 @@
-﻿using WebApp.Inerfaces;
+﻿using System.Threading.Tasks;
 using WebApp.Services;
 using WebApp.ViewModels;
 
@@ -11,9 +11,9 @@ namespace WebApp.Repositories
         {
             _deliveryService = deliveryService;
         }
-        public Delivery GetStatusHistoryFromTracingId(string tracingId)
+        public async Task<Delivery> GetStatusHistoryFromTracingId(string tracingId)
         {
-            _deliveryService.
+            return await _deliveryService.GetDeliveryAsync(tracingId);
         }
     }
 }
