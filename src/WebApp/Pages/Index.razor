@@ -33,13 +33,13 @@
 @code 
 {
 	private string tracingId = "";
-	private DeliveryServiceStub _deliveryServiceStub = new DeliveryServiceStub();
+	private IDeliveryService _deliveryService= new DeliveryServiceStub();
 	private List<Delivery> _deliveries = new List<Delivery>();
 	private List<Status> _statusHistory = new List<Status>();
 
 	private async void OnTrackingIdButtonClick()
 	{
-		_deliveries.Add(await _deliveryServiceStub.GetDeliveryAsync(tracingId));
+		_deliveries.Add(await _deliveryService.GetDeliveryAsync(tracingId));
 		_statusHistory.AddRange(_deliveries[0].StatusHistory);
 	}
 
