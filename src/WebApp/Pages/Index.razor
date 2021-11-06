@@ -1,23 +1,27 @@
 ﻿@page "/"
-
+@using WebApp.Services
+@using WebApp.ViewModels
 <PageTitle>Index</PageTitle>
 
 <div>
 	<img src=~/logoicon.png/>
 	<div class='background'>
 			<h1 class='title'>Tracking Number</h1>
-			<input placeholder='xxxx-xxxx-xxxx' class='traceinput'/>
-			<button>Enter</button>
+			<input placeholder='xxxx-xxxx-xxxx' @bind="tracingId"class='traceinput'/>
+			<button @onclick="OnTrackingIdButtonClick">Enter</button>
 	</div>
 	<div>
 		<label>History</label>
 		<table border="1">
 		<tbody>
-		@foreach(var status in statuses)
+		@foreach(var status in _statusHistory)
 		{
 			<tr>
 				<td>
-					@status
+					@status.UpdateTime: 
+				</td>
+				<td>
+					@status.Message
 				</td>
 			</tr>
 		}
@@ -28,10 +32,15 @@
 
 @code 
 {
-	private IEnumerable<string> statuses = new[]
+	private string tracingId = "";
+	private IDeliveryService _deliveryService= new DeliveryServiceStub();
+	private List<Delivery> _deliveries = new List<Delivery>();
+	private List<Status> _statusHistory = new List<Status>();
+
+	private async void OnTrackingIdButtonClick()
 	{
-		"Gay",
-		"Faggit",
-		"Dead"
-	};
+		_deliveries.Add(await _deliveryService.GetDeliveryAsync(tracingId));
+		_statusHistory.AddRange(_deliveries[0].StatusHistory);
+	}
+
 }
