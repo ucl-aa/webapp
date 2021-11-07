@@ -26,8 +26,8 @@ namespace WebAppTest
 
         private void VerifyInitialState()
         {
-            _input.MarkupMatches("<input placeholder='xxxx-xxxx-xxxx' class='traceinput'/>");
-            _button.MarkupMatches("<button >Enter</button>");
+            _input.MarkupMatches("<input placeholder='xxxx-xxxx-xxxx' @bind=\"tracingId\"class='traceinput'/>");
+            _button.MarkupMatches("<button @onclick=\"OnTrackingIdButtonClick\" > Enter</button>");
             _output.MarkupMatches("<td>Order Recieved</td>");
         }
 
