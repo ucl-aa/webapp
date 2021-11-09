@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+# [1.4.0](https://github.com/ucl-aa/webapp/compare/v1.3.1...v1.4.0) (2021-11-09)
+
+
+### Bug Fixes
+
+* .csproj name ([36cb3c3](https://github.com/ucl-aa/webapp/commit/36cb3c33212c977b6d28b8d6516ef180c666653e))
+
+
+### Features
+
+* Scss support ([48acf77](https://github.com/ucl-aa/webapp/commit/48acf77377bedf47b0d76394fa5a9fdad4b292b4))
+
 ## [1.3.1](https://github.com/ucl-aa/webapp/compare/v1.3.0...v1.3.1) (2021-11-09)
 
 
