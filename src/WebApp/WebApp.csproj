@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WebApp</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableDefaultSassItems>false</EnableDefaultSassItems>
+<!--    <LibSassOutputStyle>compressed</LibSassOutputStyle>-->
+<!--    <LibSassOutputStyle Condition="'$(Configuration)' == 'Debug'">expanded</LibSassOutputStyle>-->
+<!--    <LibSassOutputLevel>verbose</LibSassOutputLevel>-->
+<!--    <LibSassMessageLevel>High</LibSassMessageLevel>-->
+</PropertyGroup>
+
+<!--  <ItemGroup>-->
+<!--    <SassFile Include="wwwroot/scss/main.scss" />-->
+<!--  </ItemGroup>-->
+
+
+  <ItemGroup>
+    <PackageReference Include="LibSassBuilder" Version="1.6.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-rc.1.21452.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-rc.1.21452.15" PrivateAssets="all" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Remove="wwwroot\scss\main.scss" />
+    <EmbeddedResource Include="wwwroot\scss\main.scss" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Remove="main.css" />
+    <None Include="wwwroot\main.css.map" />
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 0;
+}
+
+a {
+  color: $clr-primary;
+  text-decoration: none;
+}

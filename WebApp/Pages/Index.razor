@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<PageTitle>Track and Trace</PageTitle>
+
+<a href="/">
+	<img class="logo" src="/aalogo.png" asp-append-version="true" alt="business logo" />
+</a>
+
+<div class="search-container">
+	<div class="ma">
+		<h1 class="title">Tracking Number</h1>
+        
+        <div class="search-input">
+        	<div class="search-input-field">
+        		<input class="trace-input"/>
+        		<p class="trace-input-text">xxxx-xxxx-xxxxxxxx</p>
+        	</div>
+        	<div class="btn-standard">
+        		<img src="icons/search.svg" alt="search">
+        	</div>
+        </div>
+	</div>
+</div>
+
+<div class="content-container ma">
+	<h2>History</h2>
+
+	<TableTemplate Items="_history" Context="h">
+		<TableHeader>
+			@* <th>TimeStamp</th> *@
+			@* <th>Message</th> *@
+		</TableHeader>
+		<RowTemplate>
+			<td>@h.TimeStamp.ToString("dd/MM/yy HH:mm")</td>
+			<td>@h.Message</td>
+		</RowTemplate>
+	</TableTemplate>
+</div>
+
+@code 
+{
+	record TrackingRecord(DateTime TimeStamp, string Message);
+	
+	private List<TrackingRecord> _history = new()
+	{
+		new TrackingRecord(DateTime.Now.AddDays(-2), "Picked up"),
+		new TrackingRecord(DateTime.Now.AddDays(-1), "In truck"),
+		new TrackingRecord(DateTime.Now, "Delivered!")
+	};
+}
