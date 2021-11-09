@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.3.1](https://github.com/ucl-aa/webapp/compare/v1.3.0...v1.3.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* Rename WebApp/webapp.csproj to WebApp/WebApp.csproj ([2664835](https://github.com/ucl-aa/webapp/commit/2664835c2a80f642c774ccd29d478f6096f7d455))
+
 # [1.3.0](https://github.com/ucl-aa/webapp/compare/v1.2.0...v1.3.0) (2021-11-06)
 
 
