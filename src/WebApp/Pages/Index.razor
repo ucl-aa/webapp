@@ -1,45 +1,54 @@
 ﻿@page "/"
 @using WebApp.Services
 @using WebApp.ViewModels
-<PageTitle>Index</PageTitle>
 
-<div>
-	<img src=~/logoicon.png/>
-	<div class='background'>
-			<h1 class='title'>Tracking Number</h1>
-			<input placeholder='xxxx-xxxx-xxxx' @bind="tracingId"class='traceinput'/>
-			<button @onclick="OnTrackingIdButtonClick">Enter</button>
+<PageTitle>Track and Trace</PageTitle>
+
+<a href="/">
+	<img class="logo" src="/aalogo.png" asp-append-version="true" alt="business logo" />
+</a>
+
+<div class="search-container">
+	<div class="ma">
+		<h1 class="title">Tracking Number</h1>
+
+        <div class="search-input">
+        	<div class="search-input-field">
+        		<input @bind="_tracingId" class="trace-input"/>
+        		<p class="trace-input-text">xxxx-xxxx-xxxxxxxx</p>
+        	</div>
+        	<div @onclick="OnTrackingIdButtonClick" class="btn-standard">
+        		<img src="icons/search.svg" alt="search">
+        	</div>
+        </div>
 	</div>
-	<div>
-		<label>History</label>
-		<table border="1">
-		<tbody>
-		@foreach(var status in _statusHistory)
-		{
-			<tr>
-				<td>
-					@status.UpdateTime: 
-				</td>
-				<td>
-					@status.Message
-				</td>
-			</tr>
-		}
-		</tbody>
-		</table>
-	</div>
+</div>
+
+<div class="content-container ma">
+	<h2>History</h2>
+
+	<TableTemplate Items="_statusHistory" Context="h">
+		<TableHeader>
+			@* <th>TimeStamp</th> *@
+			@* <th>Message</th> *@
+		</TableHeader>
+		<RowTemplate>
+			<td>@h.UpdateTime".ToString("dd/MM/yy HH:mm")</td>
+			<td>@h.Message</td>
+		</RowTemplate>
+	</TableTemplate>
 </div>
 
 @code 
 {
-	private string tracingId = "";
-	private IDeliveryService _deliveryService= new DeliveryServiceStub();
-	private List<Delivery> _deliveries = new List<Delivery>();
-	private List<Status> _statusHistory = new List<Status>();
+	private string _tracingId = "";
+	private readonly IDeliveryService _deliveryService= new DeliveryServiceStub();
+	private readonly List<Delivery> _deliveries = new();
+	private readonly List<Status> _statusHistory = new();
 
 	private async void OnTrackingIdButtonClick()
 	{
-		_deliveries.Add(await _deliveryService.GetDeliveryAsync(tracingId));
+		_deliveries.Add(await _deliveryService.GetDeliveryAsync(_tracingId));
 		_statusHistory.AddRange(_deliveries[0].StatusHistory);
 	}
 
