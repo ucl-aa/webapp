@@ -1,5 +1,32 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/ucl-aa/webapp/compare/v1.2.0...v1.3.0) (2021-11-06)
+
+
+### Bug Fixes
+
+* Docker build ([32fa98d](https://github.com/ucl-aa/webapp/commit/32fa98d961ebd9d6ce785fe4d7b685881c7885fd))
+* Docker build ([b16d8fd](https://github.com/ucl-aa/webapp/commit/b16d8fd9d009154c4179010525fc8d7cdf311d4f))
+
+
+### Features
+
+* History view ([582c3f7](https://github.com/ucl-aa/webapp/commit/582c3f7beb7a03ed98fc4da55d541a0620f932d0))
+
+# [1.2.0](https://github.com/ucl-aa/webapp/compare/v1.1.4...v1.2.0) (2021-10-27)
+
+
+### Features
+
+* Deployment Pipeline ([8d5dca1](https://github.com/ucl-aa/webapp/commit/8d5dca1d8c9cf606de183329430d8ed639929657))
+
+## [1.1.4](https://github.com/ucl-aa/webapp/compare/v1.1.3...v1.1.4) (2021-10-26)
+
+
+### Bug Fixes
+
+* Add automatic test run ([d60afc9](https://github.com/ucl-aa/webapp/commit/d60afc9ecd23786b47cb7c586329fda06cfc926f))
+
 ## [1.1.3](https://github.com/ucl-aa/webapp/compare/v1.1.2...v1.1.3) (2021-10-26)
 
 

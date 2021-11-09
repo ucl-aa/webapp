@@ -1,12 +1,12 @@
 ﻿kind: pipeline
 type: kubernetes
-name: default
+name: build
 
 steps:
   - name: test
     image: mcr.microsoft.com/dotnet/sdk:6.0-alpine
     commands:
-      - dotnet test WebAppTest
+      - dotnet test src/WebAppTest
 
   - name: semantic-release
     image: cr.seen.wtf/semantic-release-container
@@ -34,3 +34,24 @@ services:
 volumes:
   - name: dockersock
     temp: {}
+
+trigger:
+  event:
+    - push
+
+---
+kind: pipeline
+type: kubernetes
+name: deploy
+
+steps:
+  - name: deploy
+    image: bitnami/kubectl
+    commands:
+      - kubectl rollout restart -n ucl-aa deploy aa-webapp
+
+trigger:
+  target:
+    - production
+  event:
+    - promote
