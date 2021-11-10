@@ -23,7 +23,7 @@
         [
             "@semantic-release-plus/docker",
             {
-                "name": "webapp",
+                "name": "aa-webapp",
                 "registry": "cr.seen.wtf",
                 "skipLogin": true
             }
