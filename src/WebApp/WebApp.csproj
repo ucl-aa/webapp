@@ -11,10 +11,6 @@
   <PropertyGroup>
     <EnableDefaultSassItems>false</EnableDefaultSassItems>
   </PropertyGroup>
-
-<!--  <ItemGroup>-->
-<!--    <SassFile Include="wwwroot/scss/main.scss" />-->
-<!--  </ItemGroup>-->
   
   <ItemGroup>
     <PackageReference Include="LibSassBuilder" Version="1.6.4" />
