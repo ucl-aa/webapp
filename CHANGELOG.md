@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.4](https://github.com/ucl-aa/webapp/compare/v1.5.3...v1.5.4) (2021-11-10)
+
+
+### Bug Fixes
+
+* Datetime string format ([7c786c9](https://github.com/ucl-aa/webapp/commit/7c786c99299894dcde3adcc20d07e4f7f9eeb4f2))
+
 ## [1.5.3](https://github.com/ucl-aa/webapp/compare/v1.5.2...v1.5.3) (2021-11-10)
 
 
