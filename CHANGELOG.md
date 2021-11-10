@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/ucl-aa/webapp/compare/v1.4.0...v1.5.0) (2021-11-10)
+
+
+### Features
+
+* New UI Desgin ([07a6330](https://github.com/ucl-aa/webapp/commit/07a633026bdf5505b9c7c7167cea7ff8964f951c))
+
 # [1.4.0](https://github.com/ucl-aa/webapp/compare/v1.3.1...v1.4.0) (2021-11-09)
 
 
