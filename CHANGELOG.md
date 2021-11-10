@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.1](https://github.com/ucl-aa/webapp/compare/v1.5.0...v1.5.1) (2021-11-10)
+
+
+### Bug Fixes
+
+* Quickfix image name ([8a540e3](https://github.com/ucl-aa/webapp/commit/8a540e37a1f8c87dbde66a97dbfa070e26554d8b))
+
 # [1.5.0](https://github.com/ucl-aa/webapp/compare/v1.4.0...v1.5.0) (2021-11-10)
 
 
